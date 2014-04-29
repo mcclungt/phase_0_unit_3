@@ -8,10 +8,10 @@
 
 
 ### Reflection
-# Ran into many problems along the way with
-# this one, but SQL still seems pretty intuitive.
-# For some reason the first section doesn't come up as
-# finished even though I definitely finished it. Most of
-# the quizes I ended up getting one wrong on due to some
-# oversight or accident, but I feel as though I'm getting
-# the hang of it.
+Ran into many problems along the way with
+this one, but SQL still seems pretty intuitive.
+For some reason the first section doesn't come up as
+finished even though I definitely finished it. Most of
+the quizes I ended up getting one wrong on due to some
+oversight or accident, but I feel as though I'm getting
+the hang of it.

@@ -73,10 +73,10 @@ id          first_name  last_name   email                  created_at           
  Dee
 
 ## Release 5: Reflect
-# While SQLite gave me a few problems, the challenge went very smoothly.
-# Working with AJ was great because we were both new to SQL and we were
-# pretty much on the same page. As you can see, the formatting looks a 
-# little bit strange, but this was due to the size of my terminal window,
-# and I couldn't find a way to adjust it. Overall, I felt that this assignment
-# gave me an idea of the legitimate real-world application of the SQL
-# library.
+While SQLite gave me a few problems, the challenge went very smoothly.
+Working with AJ was great because we were both new to SQL and we were
+pretty much on the same page. As you can see, the formatting looks a 
+little bit strange, but this was due to the size of my terminal window,
+and I couldn't find a way to adjust it. Overall, I felt that this assignment
+gave me an idea of the legitimate real-world application of the SQL
+library.
