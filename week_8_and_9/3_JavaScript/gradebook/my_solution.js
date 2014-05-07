@@ -7,7 +7,7 @@ variables match (i.e., 'Joseph' is the first element in students; his scores are
 
 Do not alter the students and scores code.
 
-I worked on this challenge [by myself, with:]
+I worked on this challenge by myself.
 
 */
 
@@ -18,39 +18,64 @@ var scores = [ [80, 70, 70, 100],
                [75, 70, 80, 75],
                [100, 90, 95, 85] ]
 
-
-
-
-
-
 // __________________________________________
 // Write your code below.
 
+var average = function(array){
+  var sum = 0;
+  for (var i=0; i<array.length; i++)
+  {
+    sum += array[i]
+  }
+  return sum/array.length;
+};
 
-
-
-
+var gradebook = {
+  "Joseph": {
+    testScores: scores[0]
+  },
+  "Susan": {
+    testScores: scores[1]
+  },
+  "William":{
+    testScores: scores[2]
+  },
+  "Elizabeth":{
+    testScores: scores[3]
+  },
+  addScore: function(name, score){
+    for (var i=0; i<students.length; i++) {
+      if (name == students[i]){
+        scores[i].push(score);
+      }
+      
+    }
+  },
+  getAverage: function(name){
+    for (var i=0; i<students.length; i++) {
+      if (name == students[i]){
+        return average(scores[i]);
+      }
+    }
+  }
+};
 
 // __________________________________________
 // Refactored Solution
 
-
-
-
-
-
-
-
 // __________________________________________
 // Reflect
 
-
-
-
-
-
-
-
+/*
+Woooow! I was stuck on this one for a while. Although I definitely feel a bit rusty
+on javascript I think I managed alright. Most sections worked out fairly well, but I
+spent so much time working on it that I ended up refactoring it several times as I
+tried to get the driver code to pass. I really got stuck on the addScore and getAverage
+functions. I expected that I could just push the information onto the student object, as
+opposed to the original array. I kept on getting an error that the data type was undefined,
+and I guess I've gotten really accustomed to flexible data types in ruby. Regardless, the
+code works well now and I think I understand it a little bit better.
+*/
 
 // __________________________________________
 // Driver Code:  Do not alter code below this line.

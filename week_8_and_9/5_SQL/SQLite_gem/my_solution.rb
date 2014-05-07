@@ -1,6 +1,6 @@
 # U3.W7: BONUS Using the SQLite Gem
 
-# I worked on this challenge [by myself, with:]
+# I worked on this challenge by myself.
 
 require 'sqlite3'
 
@@ -16,11 +16,20 @@ end
 
 def print_longest_serving_reps(minimum_years)  #sorry guys, oracle needs me, i didn't finish this!
   puts "LONGEST SERVING REPRESENTATIVES"
-  puts $db.execute("SELECT name FROM congress_members WHERE years_in_congress > #{minimum_years}")
+  reps = $db.execute("SELECT name, years_in_congress FROM congress_members WHERE years_in_congress > #{minimum_years}")
+  reps.each { |x| puts x.first + " - " + x.last.to_s }
 end
 
 def print_lowest_grade_level_speakers
   puts "LOWEST GRADE LEVEL SPEAKERS (less than < 8th grade)"
+  speakers = $db.execute("SELECT name, grade_current FROM congress_members WHERE grade_current < 8")
+  speakers.each { |x| puts x.first + " - " + x.last.to_s }
+end
+
+def print_state_reps(state)
+  puts state + " REPRESENTATIVES"
+  reps = $db.execute("SELECT name FROM congress_members WHERE location = '#{state}'")
+  reps.each { |x| puts x }
 end
 
 def print_separator
@@ -44,7 +53,12 @@ print_lowest_grade_level_speakers
 
 # TODO - Make a method to print the following states representatives as well:
 # (New Jersey, New York, Maine, Florida, and Alaska)
-
+print_separator
+print_state_reps("NJ")
+print_state_reps("NY")
+print_state_reps("ME")
+print_state_reps("FL")
+print_state_reps("AK")
 
 ##### BONUS #######
 # TODO (bonus) - Stop SQL injection attacks!  Statmaster learned that interpolation of variables in SQL statements leaves some security vulnerabilities.  Use the google to figure out how to protect from this type of attack.

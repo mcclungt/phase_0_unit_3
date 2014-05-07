@@ -1,0 +1,19 @@
+header {
+	text-align: center;
+	font-family: Tahoma, sans-serif;
+	height: 80px;
+	width: 100%;
+	font-size: 50px;	
+	color: black;
+	text-shadow: 0px 2px 2px gray;
+	border: 2px solid black;
+}
+
+table, td {
+	font-size: 18px;
+	border: 2px solid black;
+}
+
+table {	
+	width: 100%;
+}
